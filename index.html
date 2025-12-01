@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Layout</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+      background: #fff;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .rating span {
+      color: gold;
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Our Homes</h2>
+
+  <div class="card-container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="https://picsum.photos/400/250" alt="Cover Image">
+
+      <div class="card-content">
+        <div class="title">Ocean View Villa</div>
+        <div class="subtitle">Beautiful stay near the beach</div>
+
+        <div class="rating">
+          <span>★</span>
+          <div>4.8</div>
+        </div>
+
+        <div class="price">$120 per night</div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="https://picsum.photos/400/251" alt="Cover Image">
+
+      <div class="card-content">
+        <div class="title">Mountain Cabin</div>
+        <div class="subtitle">Peaceful getaway</div>
+        <div class="rating">
+          <span>★</span>
+          <div>4.5</div>
+        </div>
+        <div class="price">$99 per night</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
